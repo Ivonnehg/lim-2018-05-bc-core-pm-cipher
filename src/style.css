@@ -1,0 +1,20 @@
+body
+{
+  background: #C0C0C0;
+  font-family: sans-serif;
+
+}
+h2{
+  width: 50%;
+  background: yellow;
+  margin: 20PX;
+  padding: 60PX;
+}
+
+form{
+
+width: 50%;
+margin: 20PX;
+padding: 50PX;
+
+}

@@ -1,44 +1,28 @@
+//declarar las funciones
 var cifrar= document.getElementById("cifrado");
-cifrar.addEventListener("click", encode);
 var decifrar= document.getElementById("desifrado");
+//utilizar eventos de click
+cifrar.addEventListener("click", encode);
 decifrar.addEventListener("click", decode);
-var resetear=document.getElementById("reset");
-resetear.addEventListener("click", resetear)
-var output=document.getElementById('showResult');
 
+
+//funciones
 
 
 function encode (){
-  var s=document.getElementById("string").value;
-  var o= document.getElementById("offset").value;
-  var codeCipher ="Cifrado-> ";
-  var offsetInt = parseInt(o);
-  for(var i=0;i<s.length;i++)
-           {
-          var numbercode = s.charCodeAt(i);
-          if(65<= numbercode && numbercode <= 90)
-          {codeCipher += String.fromCharCode((numbercode - 65 + offsetInt)%26 +65);}
-              else if (numbercode>=97 && numbercode<=122)
-              {codeCipher += String.fromCharCode((numbercode - 97 + offsetInt)%26 +97);}
-              else
-              codeCipher+=s.chartAt(i)
-               document.getElementById('showResult').innerHTML=codeCipher;
-             }
-            }
-  function decode (){
-    var s=document.getElementById("string").value;
-    var o= document.getElementById("offset").value;
-    var offsetInt = parseInt(o);
-    var codeCipher ="Descifrado-> ";
+  //declaramos las variables de la funcion
+  let s=document.getElementById("string").value;
+  let o=parseInt(document.getElementById("offset").value) ;
+  let codeCipher=cipher.encode(s,o);
+  //para mostrar el resultado
+  document.getElementById('showResult').innerHTML=codeCipher;
+}
 
-      for(var i=0;i<s.length;i++){
-        var numbercode = s.charCodeAt(i);
-        if(65<= numbercode && numbercode <= 90)
-        {codeCipher += String.fromCharCode((numbercode + 65 - offsetInt)%26 +65);}
-            else if (numbercode>=97 && numbercode<=122){
-            codeCipher += String.fromCharCode((numbercode + 97 - offsetInt + 14)%26 +97);}
-            else
-            codeCipher+=s.chartAt(i)
-            document.getElementById('showResult').innerHTML=codeCipher;
-                                 }
-                      }
+function decode (){
+  //declaramos las variables de la funcion
+  let s=document.getElementById("string").value;
+  let o=parseInt(document.getElementById("offset").value) ;
+  let codeCipher=cipher.decode(s,o);
+  //para mostrar el resultado
+  document.getElementById('showResult').innerHTML=codeCipher;
+}

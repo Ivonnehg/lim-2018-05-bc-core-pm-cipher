@@ -6,22 +6,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>========= Caesar Cipher =======</p>
+    <h2>========= Caesar Cipher =======</h2>
     <form action="index.html">
-      <p>Introduzca su palabra</p>
-      <p> <input type="text" size="25" id="string"></p>
-      <p>Desplazamiento-> <input type="number" max="25" min="1" id="offset"></p>
+      <br>
+
+      <textarea name="name" rows="8" cols="80" id="string" size="25" placeholder="Ingrese aquí su mensaje ..."></textarea>
+
+
+      <p>Desplazamiento: <input type="number" max="25" min="1" id="offset"></p>
 
 
     <input type="button" value="cifrar" id="cifrado">
     <input type="button" value="desifrar" id="desifrado">
-    
-    <p></p>
-    <div><span>Codigo  <strong> </strong></span><span id="showResult"></span></div>
+
+    <br>
+    <br>
+    <textarea name="name" rows="8" cols="80" id="showResult" size="25" placeholder="Su mensaje decifrado/cifrado es..."></textarea>
+
     <br>
 
     <div id="root"></div>
 </form>
+    <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
