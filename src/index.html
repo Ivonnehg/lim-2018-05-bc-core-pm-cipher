@@ -6,27 +6,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>========= Caesar Cipher =======</h2>
-    <form action="index.html">
+    <header>
+     <div class="descripcion">
+       <h1>* Caesar Cipher *</h1>
+     </div>
+     <div>
+     <p><strong>Caesar Cipher</strong> Es una herramienta que permite cifrar y descifrar texto a partir de un algoritmo
+      llamado Cifrado César. Para cifrar un texto simplemente tienes que poner en el primer recuadro el texto que quieres cifrar y poner un numero
+      que serà como una clave, Despuès de dar clic en cifrar observaràs el texto cifrado listo para copiar.</p>
+      <p>Esta herramienta te da la <strong>seguridad</strong> de que nadie que no sepa la clave podrá leerlo y tener la comodidad de poder tener
+      un pequeño còdigo que podemos pegar en cualquier lugar siempre que tengamos acceso a Internet. De esta forma podrás comunicarte
+      con las personas que desees con suma confidencialidad... grandioso verdad! :D </p>
+     </div>
+    </header>
+    <div class="form">
       <br>
-
-      <textarea name="name" rows="8" cols="80" id="string" size="25" placeholder="Ingrese aquí su mensaje ..."></textarea>
-
-
-      <p>Desplazamiento: <input type="number" max="25" min="1" id="offset"></p>
-
-
-    <input type="button" value="cifrar" id="cifrado">
-    <input type="button" value="desifrar" id="desifrado">
-
-    <br>
-    <br>
-    <textarea name="name" rows="8" cols="80" id="showResult" size="25" placeholder="Su mensaje decifrado/cifrado es..."></textarea>
-
-    <br>
-
-    <div id="root"></div>
-</form>
+      <textarea name="name" rows="8" cols="80" id="string" size="100" placeholder="Ingrese aquí su mensaje ..."></textarea>
+      <p>Clave: <input type="number" max="25" min="1" id="offset"></p>
+      <input type="button" value="cifrar" id="cifrado">
+      <input type="button" value="descifrar" id="desifrado">
+      <br>
+      <br>
+      <textarea name="name" rows="8" cols="80" id="showResult" size="25" placeholder="Su mensaje decifrado/cifrado es..."></textarea>
+      <br>
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
