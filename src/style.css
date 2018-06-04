@@ -18,7 +18,7 @@ body, input{
 }
 
  div{
-  background-color: #81DAF5;
+  background-color: #A2D9CE;
   background-position: center;
   border:10px solid #00967f;
   color: black;
@@ -28,7 +28,7 @@ body, input{
 
 input[type="button"]{
   margin-bottom:0;
-  background:black;
+  background:#0B5345;
   color: #fff;
   font-size: 20px;
   border-radius: 5px;
